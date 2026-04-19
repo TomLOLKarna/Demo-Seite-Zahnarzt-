@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZahnKlinik Musterstadt – Ihr Zahnarzt</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav-wrapper">
+    <nav class="nav container">
+      <div class="nav__logo">
+        <span class="logo-icon">&#9670;</span>
+        <span class="logo-text">ZahnKlinik <strong>Musterstadt</strong></span>
+      </div>
+      <ul class="nav__links">
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#ueber-uns">Über uns</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#bewertungen">Bewertungen</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <a href="#termin" class="btn btn--primary nav__cta">Termin buchen</a>
+      <button class="nav__burger" aria-label="Menü öffnen">&#9776;</button>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="container hero__content">
+      <span class="badge">&#10003; Neue Patienten willkommen</span>
+      <h1>Ihr Lächeln.<br /><em>Unsere Leidenschaft.</em></h1>
+      <p class="hero__sub">Moderne Zahnmedizin in entspannter Atmosphäre – von der professionellen Reinigung bis zum ästhetischen Veneers.</p>
+      <div class="hero__actions">
+        <a href="#termin" class="btn btn--primary btn--lg">Termin online buchen</a>
+        <a href="#leistungen" class="btn btn--ghost btn--lg">Leistungen ansehen</a>
+      </div>
+      <div class="hero__trust">
+        <div class="trust-item"><span class="trust-num">4.9</span><span class="trust-label">Google &#9733;</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><span class="trust-num">1.200+</span><span class="trust-label">Patienten</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><span class="trust-num">15+</span><span class="trust-label">Jahre Erfahrung</span></div>
+      </div>
+    </div>
+    <div class="hero__image-col">
+      <div class="hero__image-placeholder">
+        <div class="placeholder-label">Foto: freundliche Zahnarztpraxis</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEISTUNGEN ===== -->
+  <section class="section" id="leistungen">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Was wir bieten</span>
+        <h2>Unsere Leistungen</h2>
+        <p>Von der Vorsorge bis zur komplexen Behandlung – alles unter einem Dach.</p>
+      </div>
+      <div class="cards-grid">
+
+        <div class="card">
+          <div class="card__icon card__icon--blue">&#9711;</div>
+          <h3>Prophylaxe &amp; Reinigung</h3>
+          <p>Professionelle Zahnreinigung, individuelle Prophylaxe und Früherkennung für dauerhaft gesunde Zähne.</p>
+          <a href="#" class="card__link">Mehr erfahren &#8594;</a>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--teal">&#10022;</div>
+          <h3>Ästhetische Zahnmedizin</h3>
+          <p>Bleaching, Veneers und Zahnkorrekturen für ein strahlendes, natürliches Lächeln.</p>
+          <a href="#" class="card__link">Mehr erfahren &#8594;</a>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--purple">&#9635;</div>
+          <h3>Implantologie</h3>
+          <p>Hochwertige Implantate als dauerhafter Zahnersatz – schonend, präzise und langlebig.</p>
+          <a href="#" class="card__link">Mehr erfahren &#8594;</a>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--green">&#9784;</div>
+          <h3>Kieferorthopädie</h3>
+          <p>Unsichtbare Aligner und klassische Zahnspangen für Kinder, Jugendliche und Erwachsene.</p>
+          <a href="#" class="card__link">Mehr erfahren &#8594;</a>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--orange">&#9729;</div>
+          <h3>Zahnersatz</h3>
+          <p>Kronen, Brücken und Prothesen – individuell gefertigt für optimale Funktion und Ästhetik.</p>
+          <a href="#" class="card__link">Mehr erfahren &#8594;</a>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--red">&#10012;</div>
+          <h3>Kinderzahnheilkunde</h3>
+          <p>Behutsame und spielerische Behandlung für die Kleinsten – damit der Zahnarztbesuch Spaß macht.</p>
+          <a href="#" class="card__link">Mehr erfahren &#8594;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ÜBER UNS / PRAXIS ===== -->
+  <section class="section section--alt" id="ueber-uns">
+    <div class="container about-grid">
+      <div class="about__image">
+        <div class="image-placeholder">
+          <div class="placeholder-label">Foto: moderne Praxisräume</div>
+        </div>
+        <div class="about__badge-float">
+          <span>&#127942;</span>
+          <div>
+            <strong>Praxis des Jahres 2023</strong>
+            <small>Auszeichnung Zahnmedizin</small>
+          </div>
+        </div>
+      </div>
+      <div class="about__text">
+        <span class="eyebrow">Über uns</span>
+        <h2>Moderne Zahnmedizin mit persönlichem Anspruch</h2>
+        <p>Seit über 15 Jahren behandeln wir unsere Patienten in der ZahnKlinik Musterstadt mit dem Ziel, höchste medizinische Qualität mit echter Fürsorge zu verbinden.</p>
+        <p>Unsere Praxis ist mit den neuesten digitalen Technologien ausgestattet – von 3D-Röntgen über digitale Abdrücke bis hin zu CAD/CAM-gefrästem Zahnersatz direkt in der Praxis.</p>
+        <ul class="about__features">
+          <li><span class="check">&#10003;</span> Digitales Röntgen (90 % weniger Strahlung)</li>
+          <li><span class="check">&#10003;</span> CAD/CAM – Zahnersatz in einer Sitzung</li>
+          <li><span class="check">&#10003;</span> 3-D-Implantatplanung</li>
+          <li><span class="check">&#10003;</span> Vollnarkose &amp; Lachgas möglich</li>
+          <li><span class="check">&#10003;</span> Barrierefreier Zugang</li>
+        </ul>
+        <a href="#termin" class="btn btn--primary">Termin vereinbaren</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEAM ===== -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Wir stellen uns vor</span>
+        <h2>Unser Team</h2>
+        <p>Engagierte Fachleute, die sich täglich für Ihr Wohlbefinden einsetzen.</p>
+      </div>
+      <div class="team-grid">
+
+        <div class="team-card">
+          <div class="team-card__photo">
+            <div class="photo-placeholder"></div>
+          </div>
+          <div class="team-card__info">
+            <h3>Dr. med. dent. Anna Muster</h3>
+            <span class="team-card__role">Praxisinhaberin &amp; Implantologin</span>
+            <p>Spezialisiert auf Implantologie und ästhetische Zahnmedizin. Studium in München, Weiterbildung in Zürich.</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card__photo">
+            <div class="photo-placeholder photo-placeholder--2"></div>
+          </div>
+          <div class="team-card__info">
+            <h3>Dr. med. dent. Lukas Beispiel</h3>
+            <span class="team-card__role">Zahnarzt &amp; Kieferorthopäde</span>
+            <p>Experte für unsichtbare Aligner-Behandlungen und komplexe kieferorthopädische Korrekturen.</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card__photo">
+            <div class="photo-placeholder photo-placeholder--3"></div>
+          </div>
+          <div class="team-card__info">
+            <h3>Sandra Voigt, ZMF</h3>
+            <span class="team-card__role">Prophylaxe-Spezialistin</span>
+            <p>Zertifizierte Zahnmedizinische Fachassistentin mit Schwerpunkt Prophylaxe und Patientenberatung.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BEWERTUNGEN ===== -->
+  <section class="section section--alt" id="bewertungen">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Was Patienten sagen</span>
+        <h2>Bewertungen</h2>
+        <div class="rating-summary">
+          <span class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="rating-score">4.9 / 5</span>
+          <span class="rating-count">aus 248 Google-Bewertungen</span>
+        </div>
+      </div>
+      <div class="reviews-grid">
+
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Endlich eine Praxis, bei der ich mich wirklich wohlfühle! Das Team ist unglaublich freundlich und nimmt sich Zeit. Die Behandlung war schmerzfrei und professionell."</p>
+          <div class="review-author">
+            <div class="review-avatar">MK</div>
+            <div>
+              <strong>Maria K.</strong>
+              <small>vor 2 Wochen · Google</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Nach meiner Implantat-Behandlung bin ich absolut begeistert. Dr. Muster hat alles super erklärt und der Eingriff lief reibungslos. Kann ich nur empfehlen!"</p>
+          <div class="review-author">
+            <div class="review-avatar review-avatar--2">TH</div>
+            <div>
+              <strong>Thomas H.</strong>
+              <small>vor 1 Monat · Google</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Meine Kinder freuen sich sogar auf den Zahnarztbesuch – das sagt alles! Tolle Atmosphäre, modernes Equipment und ein super nettes Team."</p>
+          <div class="review-author">
+            <div class="review-avatar review-avatar--3">SB</div>
+            <div>
+              <strong>Sabine B.</strong>
+              <small>vor 3 Wochen · Google</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TERMIN ===== -->
+  <section class="section section--dark" id="termin">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <span class="eyebrow eyebrow--light">Online-Buchung</span>
+        <h2>Termin vereinbaren</h2>
+        <p>Buchen Sie Ihren Wunschtermin bequem online – rund um die Uhr, ohne Wartezeit.</p>
+      </div>
+      <div class="booking-card">
+        <form class="booking-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Vor- &amp; Nachname</label>
+              <input type="text" id="name" placeholder="Max Mustermann" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Telefon</label>
+              <input type="tel" id="phone" placeholder="+49 123 456789" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">E-Mail</label>
+              <input type="email" id="email" placeholder="max@beispiel.de" />
+            </div>
+            <div class="form-group">
+              <label for="leistung">Gewünschte Leistung</label>
+              <select id="leistung">
+                <option value="">Bitte wählen …</option>
+                <option>Prophylaxe / Reinigung</option>
+                <option>Beratung Implantate</option>
+                <option>Ästhetische Zahnmedizin</option>
+                <option>Kieferorthopädie</option>
+                <option>Zahnersatz</option>
+                <option>Kinderzahnheilkunde</option>
+                <option>Sonstiges</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="datum">Wunschdatum</label>
+              <input type="date" id="datum" />
+            </div>
+            <div class="form-group">
+              <label for="uhrzeit">Wunschuhrzeit</label>
+              <select id="uhrzeit">
+                <option value="">Beliebig</option>
+                <option>Morgens (8–12 Uhr)</option>
+                <option>Mittags (12–14 Uhr)</option>
+                <option>Nachmittags (14–18 Uhr)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="nachricht">Anmerkungen (optional)</label>
+            <textarea id="nachricht" rows="3" placeholder="Haben Sie besondere Wünsche oder Anliegen?"></textarea>
+          </div>
+          <div class="form-footer">
+            <label class="checkbox-label">
+              <input type="checkbox" />
+              Ich stimme der Verarbeitung meiner Daten gemäß der <a href="#">Datenschutzerklärung</a> zu.
+            </label>
+            <button type="submit" class="btn btn--primary btn--lg">Termin anfragen &#8594;</button>
+          </div>
+        </form>
+        <div class="booking-info">
+          <div class="info-item">
+            <span class="info-icon">&#128222;</span>
+            <div>
+              <strong>Telefonisch</strong>
+              <p>0123 / 456 789 0</p>
+              <small>Mo–Fr: 8–18 Uhr</small>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">&#128205;</span>
+            <div>
+              <strong>Adresse</strong>
+              <p>Musterstraße 12<br />12345 Musterstadt</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">&#128336;</span>
+            <div>
+              <strong>Öffnungszeiten</strong>
+              <p>Mo–Fr: 8–18 Uhr<br />Sa: 9–13 Uhr (auf Anfrage)</p>
+            </div>
+          </div>
+          <div class="map-placeholder">
+            <span>&#128205; Karte (Google Maps Embed)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KONTAKT / FOOTER ===== -->
+  <footer class="footer" id="kontakt">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="nav__logo">
+          <span class="logo-icon">&#9670;</span>
+          <span class="logo-text">ZahnKlinik <strong>Musterstadt</strong></span>
+        </div>
+        <p>Ihr vertrauensvoller Zahnarzt in Musterstadt. Moderne Zahnmedizin – menschlich &amp; kompetent.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram" class="social-btn">&#9733; Instagram</a>
+          <a href="#" aria-label="Facebook" class="social-btn">&#9670; Facebook</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="#">Prophylaxe</a></li>
+          <li><a href="#">Ästhetik</a></li>
+          <li><a href="#">Implantate</a></li>
+          <li><a href="#">Kieferorthopädie</a></li>
+          <li><a href="#">Zahnersatz</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Praxis</h4>
+        <ul>
+          <li><a href="#">Über uns</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Technologie</a></li>
+          <li><a href="#">Stellenangebote</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Kontakt</h4>
+        <address>
+          Musterstraße 12<br />
+          12345 Musterstadt<br />
+          <a href="tel:+491234567890">0123 / 456 789 0</a><br />
+          <a href="mailto:info@zahnklinik-musterstadt.de">info@zahnklinik-musterstadt.de</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 ZahnKlinik Musterstadt · <a href="#">Impressum</a> · <a href="#">Datenschutz</a> · <a href="#">Barrierefreiheit</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
