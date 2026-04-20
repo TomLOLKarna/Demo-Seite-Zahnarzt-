@@ -6,15 +6,20 @@
   <title>ZahnKlinik Musterstadt – Ihr Zahnarzt</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 </head>
 <body>
 
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <!-- ===== NAV ===== -->
-  <header class="nav-wrapper">
+  <header class="nav-wrapper" id="navbar">
     <nav class="nav container">
       <div class="nav__logo">
-        <span class="logo-icon">&#9670;</span>
+        <div class="logo-mark">
+          <span>Z</span>
+        </div>
         <span class="logo-text">ZahnKlinik <strong>Musterstadt</strong></span>
       </div>
       <ul class="nav__links">
@@ -24,121 +29,207 @@
         <li><a href="#bewertungen">Bewertungen</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
-      <a href="#termin" class="btn btn--primary nav__cta">Termin buchen</a>
-      <button class="nav__burger" aria-label="Menü öffnen">&#9776;</button>
+      <a href="#termin" class="btn btn--primary nav__cta">
+        <span>Termin buchen</span>
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <button class="nav__burger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
   </header>
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <div class="hero__bg"></div>
+    <!-- Animated blobs -->
+    <div class="blob blob--1"></div>
+    <div class="blob blob--2"></div>
+    <div class="blob blob--3"></div>
+    <!-- Floating particles -->
+    <div class="particles" id="particles"></div>
+
     <div class="container hero__content">
-      <span class="badge">&#10003; Neue Patienten willkommen</span>
-      <h1>Ihr Lächeln.<br /><em>Unsere Leidenschaft.</em></h1>
-      <p class="hero__sub">Moderne Zahnmedizin in entspannter Atmosphäre – von der professionellen Reinigung bis zum ästhetischen Veneers.</p>
-      <div class="hero__actions">
-        <a href="#termin" class="btn btn--primary btn--lg">Termin online buchen</a>
-        <a href="#leistungen" class="btn btn--ghost btn--lg">Leistungen ansehen</a>
+      <div class="hero__text">
+        <span class="badge animate-fade-down">
+          <span class="badge__dot"></span>
+          Neue Patienten willkommen
+        </span>
+        <h1 class="animate-fade-up" style="--delay:.1s">
+          Ihr Lächeln.<br />
+          <span class="gradient-text">Unsere Leidenschaft.</span>
+        </h1>
+        <p class="hero__sub animate-fade-up" style="--delay:.2s">
+          Moderne Zahnmedizin in entspannter Atmosphäre – von der professionellen Reinigung bis zum ästhetischen Veneers.
+        </p>
+        <div class="hero__actions animate-fade-up" style="--delay:.3s">
+          <a href="#termin" class="btn btn--primary btn--lg btn--glow">
+            <span>Termin online buchen</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#leistungen" class="btn btn--outline btn--lg">Leistungen ansehen</a>
+        </div>
+        <div class="hero__trust animate-fade-up" style="--delay:.4s">
+          <div class="trust-item">
+            <span class="trust-num" data-count="4.9" data-decimal="1">0</span>
+            <span class="trust-label">Google ★</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <span class="trust-num" data-count="1200" data-suffix="+">0</span>
+            <span class="trust-label">Patienten</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <span class="trust-num" data-count="15" data-suffix="+">0</span>
+            <span class="trust-label">Jahre Erfahrung</span>
+          </div>
+        </div>
       </div>
-      <div class="hero__trust">
-        <div class="trust-item"><span class="trust-num">4.9</span><span class="trust-label">Google &#9733;</span></div>
-        <div class="trust-divider"></div>
-        <div class="trust-item"><span class="trust-num">1.200+</span><span class="trust-label">Patienten</span></div>
-        <div class="trust-divider"></div>
-        <div class="trust-item"><span class="trust-num">15+</span><span class="trust-label">Jahre Erfahrung</span></div>
+      <div class="hero__visual animate-fade-left" style="--delay:.2s">
+        <div class="hero__card-stack">
+          <div class="floating-card floating-card--main">
+            <div class="placeholder-label">📷 Praxisfoto</div>
+          </div>
+          <div class="floating-card floating-card--stat">
+            <div class="stat-icon">★</div>
+            <div>
+              <strong>4.9/5</strong>
+              <small>Google Rating</small>
+            </div>
+          </div>
+          <div class="floating-card floating-card--award">
+            <span>🏆</span>
+            <div>
+              <strong>Praxis 2023</strong>
+              <small>Auszeichnung</small>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="hero__image-col">
-      <div class="hero__image-placeholder">
-        <div class="placeholder-label">Foto: freundliche Zahnarztpraxis</div>
+
+    <div class="hero__scroll-hint">
+      <div class="scroll-mouse">
+        <div class="scroll-mouse__wheel"></div>
       </div>
+      <span>Scrollen</span>
     </div>
   </section>
 
   <!-- ===== LEISTUNGEN ===== -->
   <section class="section" id="leistungen">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="eyebrow">Was wir bieten</span>
         <h2>Unsere Leistungen</h2>
         <p>Von der Vorsorge bis zur komplexen Behandlung – alles unter einem Dach.</p>
       </div>
       <div class="cards-grid">
-
-        <div class="card">
-          <div class="card__icon card__icon--blue">&#9711;</div>
+        <div class="card reveal" style="--delay:0s">
+          <div class="card__icon card__icon--blue">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
           <h3>Prophylaxe &amp; Reinigung</h3>
           <p>Professionelle Zahnreinigung, individuelle Prophylaxe und Früherkennung für dauerhaft gesunde Zähne.</p>
-          <a href="#" class="card__link">Mehr erfahren &#8594;</a>
+          <a href="#" class="card__link">Mehr erfahren →</a>
+          <div class="card__glow"></div>
         </div>
 
-        <div class="card">
-          <div class="card__icon card__icon--teal">&#10022;</div>
+        <div class="card reveal" style="--delay:.08s">
+          <div class="card__icon card__icon--teal">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
           <h3>Ästhetische Zahnmedizin</h3>
           <p>Bleaching, Veneers und Zahnkorrekturen für ein strahlendes, natürliches Lächeln.</p>
-          <a href="#" class="card__link">Mehr erfahren &#8594;</a>
+          <a href="#" class="card__link">Mehr erfahren →</a>
+          <div class="card__glow"></div>
         </div>
 
-        <div class="card">
-          <div class="card__icon card__icon--purple">&#9635;</div>
+        <div class="card reveal" style="--delay:.16s">
+          <div class="card__icon card__icon--purple">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 12h6M12 9v6"/></svg>
+          </div>
           <h3>Implantologie</h3>
           <p>Hochwertige Implantate als dauerhafter Zahnersatz – schonend, präzise und langlebig.</p>
-          <a href="#" class="card__link">Mehr erfahren &#8594;</a>
+          <a href="#" class="card__link">Mehr erfahren →</a>
+          <div class="card__glow"></div>
         </div>
 
-        <div class="card">
-          <div class="card__icon card__icon--green">&#9784;</div>
+        <div class="card reveal" style="--delay:.24s">
+          <div class="card__icon card__icon--green">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
           <h3>Kieferorthopädie</h3>
           <p>Unsichtbare Aligner und klassische Zahnspangen für Kinder, Jugendliche und Erwachsene.</p>
-          <a href="#" class="card__link">Mehr erfahren &#8594;</a>
+          <a href="#" class="card__link">Mehr erfahren →</a>
+          <div class="card__glow"></div>
         </div>
 
-        <div class="card">
-          <div class="card__icon card__icon--orange">&#9729;</div>
+        <div class="card reveal" style="--delay:.32s">
+          <div class="card__icon card__icon--orange">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
           <h3>Zahnersatz</h3>
           <p>Kronen, Brücken und Prothesen – individuell gefertigt für optimale Funktion und Ästhetik.</p>
-          <a href="#" class="card__link">Mehr erfahren &#8594;</a>
+          <a href="#" class="card__link">Mehr erfahren →</a>
+          <div class="card__glow"></div>
         </div>
 
-        <div class="card">
-          <div class="card__icon card__icon--red">&#10012;</div>
+        <div class="card reveal" style="--delay:.40s">
+          <div class="card__icon card__icon--red">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
           <h3>Kinderzahnheilkunde</h3>
           <p>Behutsame und spielerische Behandlung für die Kleinsten – damit der Zahnarztbesuch Spaß macht.</p>
-          <a href="#" class="card__link">Mehr erfahren &#8594;</a>
+          <a href="#" class="card__link">Mehr erfahren →</a>
+          <div class="card__glow"></div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ===== ÜBER UNS / PRAXIS ===== -->
+  <!-- ===== ÜBER UNS ===== -->
   <section class="section section--alt" id="ueber-uns">
     <div class="container about-grid">
-      <div class="about__image">
+      <div class="about__image reveal reveal--left">
         <div class="image-placeholder">
-          <div class="placeholder-label">Foto: moderne Praxisräume</div>
+          <div class="placeholder-label">📷 Moderne Praxisräume</div>
         </div>
         <div class="about__badge-float">
-          <span>&#127942;</span>
+          <span>🏆</span>
           <div>
             <strong>Praxis des Jahres 2023</strong>
             <small>Auszeichnung Zahnmedizin</small>
           </div>
         </div>
+        <div class="about__stats">
+          <div class="about-stat">
+            <span class="about-stat__num" data-count="1200" data-suffix="+">0</span>
+            <span>Patienten</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat__num" data-count="15" data-suffix=" J.">0</span>
+            <span>Erfahrung</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat__num" data-count="98" data-suffix="%">0</span>
+            <span>Weiterempfehlung</span>
+          </div>
+        </div>
       </div>
-      <div class="about__text">
+      <div class="about__text reveal reveal--right">
         <span class="eyebrow">Über uns</span>
         <h2>Moderne Zahnmedizin mit persönlichem Anspruch</h2>
         <p>Seit über 15 Jahren behandeln wir unsere Patienten in der ZahnKlinik Musterstadt mit dem Ziel, höchste medizinische Qualität mit echter Fürsorge zu verbinden.</p>
         <p>Unsere Praxis ist mit den neuesten digitalen Technologien ausgestattet – von 3D-Röntgen über digitale Abdrücke bis hin zu CAD/CAM-gefrästem Zahnersatz direkt in der Praxis.</p>
         <ul class="about__features">
-          <li><span class="check">&#10003;</span> Digitales Röntgen (90 % weniger Strahlung)</li>
-          <li><span class="check">&#10003;</span> CAD/CAM – Zahnersatz in einer Sitzung</li>
-          <li><span class="check">&#10003;</span> 3-D-Implantatplanung</li>
-          <li><span class="check">&#10003;</span> Vollnarkose &amp; Lachgas möglich</li>
-          <li><span class="check">&#10003;</span> Barrierefreier Zugang</li>
+          <li><span class="check-icon">✓</span> Digitales Röntgen (90 % weniger Strahlung)</li>
+          <li><span class="check-icon">✓</span> CAD/CAM – Zahnersatz in einer Sitzung</li>
+          <li><span class="check-icon">✓</span> 3-D-Implantatplanung</li>
+          <li><span class="check-icon">✓</span> Vollnarkose &amp; Lachgas möglich</li>
+          <li><span class="check-icon">✓</span> Barrierefreier Zugang</li>
         </ul>
-        <a href="#termin" class="btn btn--primary">Termin vereinbaren</a>
+        <a href="#termin" class="btn btn--primary btn--lg">Termin vereinbaren →</a>
       </div>
     </div>
   </section>
@@ -146,16 +237,21 @@
   <!-- ===== TEAM ===== -->
   <section class="section" id="team">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="eyebrow">Wir stellen uns vor</span>
         <h2>Unser Team</h2>
         <p>Engagierte Fachleute, die sich täglich für Ihr Wohlbefinden einsetzen.</p>
       </div>
       <div class="team-grid">
-
-        <div class="team-card">
+        <div class="team-card reveal" style="--delay:0s">
           <div class="team-card__photo">
             <div class="photo-placeholder"></div>
+            <div class="team-card__overlay">
+              <div class="team-card__social">
+                <a href="#">in</a>
+                <a href="#">@</a>
+              </div>
+            </div>
           </div>
           <div class="team-card__info">
             <h3>Dr. med. dent. Anna Muster</h3>
@@ -164,9 +260,15 @@
           </div>
         </div>
 
-        <div class="team-card">
+        <div class="team-card reveal" style="--delay:.1s">
           <div class="team-card__photo">
             <div class="photo-placeholder photo-placeholder--2"></div>
+            <div class="team-card__overlay">
+              <div class="team-card__social">
+                <a href="#">in</a>
+                <a href="#">@</a>
+              </div>
+            </div>
           </div>
           <div class="team-card__info">
             <h3>Dr. med. dent. Lukas Beispiel</h3>
@@ -175,9 +277,15 @@
           </div>
         </div>
 
-        <div class="team-card">
+        <div class="team-card reveal" style="--delay:.2s">
           <div class="team-card__photo">
             <div class="photo-placeholder photo-placeholder--3"></div>
+            <div class="team-card__overlay">
+              <div class="team-card__social">
+                <a href="#">in</a>
+                <a href="#">@</a>
+              </div>
+            </div>
           </div>
           <div class="team-card__info">
             <h3>Sandra Voigt, ZMF</h3>
@@ -185,7 +293,6 @@
             <p>Zertifizierte Zahnmedizinische Fachassistentin mit Schwerpunkt Prophylaxe und Patientenberatung.</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -193,20 +300,20 @@
   <!-- ===== BEWERTUNGEN ===== -->
   <section class="section section--alt" id="bewertungen">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="eyebrow">Was Patienten sagen</span>
         <h2>Bewertungen</h2>
         <div class="rating-summary">
-          <span class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="rating-stars">★★★★★</span>
           <span class="rating-score">4.9 / 5</span>
           <span class="rating-count">aus 248 Google-Bewertungen</span>
         </div>
       </div>
       <div class="reviews-grid">
-
-        <div class="review-card">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Endlich eine Praxis, bei der ich mich wirklich wohlfühle! Das Team ist unglaublich freundlich und nimmt sich Zeit. Die Behandlung war schmerzfrei und professionell."</p>
+        <div class="review-card reveal" style="--delay:0s">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p>Endlich eine Praxis, bei der ich mich wirklich wohlfühle! Das Team ist unglaublich freundlich und nimmt sich Zeit. Die Behandlung war schmerzfrei und professionell.</p>
           <div class="review-author">
             <div class="review-avatar">MK</div>
             <div>
@@ -216,9 +323,10 @@
           </div>
         </div>
 
-        <div class="review-card">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Nach meiner Implantat-Behandlung bin ich absolut begeistert. Dr. Muster hat alles super erklärt und der Eingriff lief reibungslos. Kann ich nur empfehlen!"</p>
+        <div class="review-card reveal" style="--delay:.1s">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p>Nach meiner Implantat-Behandlung bin ich absolut begeistert. Dr. Muster hat alles super erklärt und der Eingriff lief reibungslos. Kann ich nur empfehlen!</p>
           <div class="review-author">
             <div class="review-avatar review-avatar--2">TH</div>
             <div>
@@ -228,9 +336,10 @@
           </div>
         </div>
 
-        <div class="review-card">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Meine Kinder freuen sich sogar auf den Zahnarztbesuch – das sagt alles! Tolle Atmosphäre, modernes Equipment und ein super nettes Team."</p>
+        <div class="review-card reveal" style="--delay:.2s">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p>Meine Kinder freuen sich sogar auf den Zahnarztbesuch – das sagt alles! Tolle Atmosphäre, modernes Equipment und ein super nettes Team.</p>
           <div class="review-author">
             <div class="review-avatar review-avatar--3">SB</div>
             <div>
@@ -239,7 +348,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -247,12 +355,12 @@
   <!-- ===== TERMIN ===== -->
   <section class="section section--dark" id="termin">
     <div class="container">
-      <div class="section-header section-header--light">
+      <div class="section-header section-header--light reveal">
         <span class="eyebrow eyebrow--light">Online-Buchung</span>
         <h2>Termin vereinbaren</h2>
         <p>Buchen Sie Ihren Wunschtermin bequem online – rund um die Uhr, ohne Wartezeit.</p>
       </div>
-      <div class="booking-card">
+      <div class="booking-card reveal">
         <form class="booking-form">
           <div class="form-row">
             <div class="form-group">
@@ -305,14 +413,17 @@
           <div class="form-footer">
             <label class="checkbox-label">
               <input type="checkbox" />
-              Ich stimme der Verarbeitung meiner Daten gemäß der <a href="#">Datenschutzerklärung</a> zu.
+              Ich stimme der <a href="#">Datenschutzerklärung</a> zu.
             </label>
-            <button type="submit" class="btn btn--primary btn--lg">Termin anfragen &#8594;</button>
+            <button type="submit" class="btn btn--primary btn--lg btn--glow">
+              <span>Termin anfragen</span>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
           </div>
         </form>
         <div class="booking-info">
           <div class="info-item">
-            <span class="info-icon">&#128222;</span>
+            <div class="info-icon-wrap">📞</div>
             <div>
               <strong>Telefonisch</strong>
               <p>0123 / 456 789 0</p>
@@ -320,39 +431,44 @@
             </div>
           </div>
           <div class="info-item">
-            <span class="info-icon">&#128205;</span>
+            <div class="info-icon-wrap">📍</div>
             <div>
               <strong>Adresse</strong>
               <p>Musterstraße 12<br />12345 Musterstadt</p>
             </div>
           </div>
           <div class="info-item">
-            <span class="info-icon">&#128336;</span>
+            <div class="info-icon-wrap">🕐</div>
             <div>
               <strong>Öffnungszeiten</strong>
               <p>Mo–Fr: 8–18 Uhr<br />Sa: 9–13 Uhr (auf Anfrage)</p>
             </div>
           </div>
           <div class="map-placeholder">
-            <span>&#128205; Karte (Google Maps Embed)</span>
+            <span>📍 Google Maps Embed</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== KONTAKT / FOOTER ===== -->
+  <!-- ===== FOOTER ===== -->
   <footer class="footer" id="kontakt">
+    <div class="footer__wave">
+      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 80L1440 80L1440 40C1200 80 900 0 720 0C540 0 240 80 0 40L0 80Z" fill="#0a0f1e"/>
+      </svg>
+    </div>
     <div class="container footer__grid">
       <div class="footer__brand">
         <div class="nav__logo">
-          <span class="logo-icon">&#9670;</span>
-          <span class="logo-text">ZahnKlinik <strong>Musterstadt</strong></span>
+          <div class="logo-mark">Z</div>
+          <span class="logo-text" style="color:white">ZahnKlinik <strong>Musterstadt</strong></span>
         </div>
         <p>Ihr vertrauensvoller Zahnarzt in Musterstadt. Moderne Zahnmedizin – menschlich &amp; kompetent.</p>
         <div class="social-links">
-          <a href="#" aria-label="Instagram" class="social-btn">&#9733; Instagram</a>
-          <a href="#" aria-label="Facebook" class="social-btn">&#9670; Facebook</a>
+          <a href="#" class="social-btn">Instagram</a>
+          <a href="#" class="social-btn">Facebook</a>
         </div>
       </div>
       <div class="footer__col">
@@ -377,8 +493,7 @@
       <div class="footer__col">
         <h4>Kontakt</h4>
         <address>
-          Musterstraße 12<br />
-          12345 Musterstadt<br />
+          Musterstraße 12<br />12345 Musterstadt<br />
           <a href="tel:+491234567890">0123 / 456 789 0</a><br />
           <a href="mailto:info@zahnklinik-musterstadt.de">info@zahnklinik-musterstadt.de</a>
         </address>
